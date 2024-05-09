@@ -5,6 +5,7 @@ using UnityEngine;
 public class Backgroun : MonoBehaviour
 {
     public float speed;
+    public float limite;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class Backgroun : MonoBehaviour
     {
      transform.position = new Vector2(transform.position.x,transform.position.y - speed * Time.deltaTime) ;   
 
-        if (transform.position.y <= -4.5f)
+        if (transform.position.y <= limite)
         {
             transform.position = new Vector2(transform.position.x, 0); 
         }

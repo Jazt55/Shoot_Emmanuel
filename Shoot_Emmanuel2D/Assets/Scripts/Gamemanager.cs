@@ -24,6 +24,9 @@ public class Gamemanager : MonoBehaviour
     {
         pontuacao = 0;
         pontuacaotxt.text = "0";
+        scan += 2;
+        scan2 += 4;
+        scan3 += 7;
     }
 
     // Update is called once per frame
