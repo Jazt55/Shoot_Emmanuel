@@ -70,6 +70,9 @@ public class PlayerMov : MonoBehaviour
 
         
     }
+
+   
+
     void tiro()
     {
         posicaoBala = transform.position + new Vector3(0, 1, 0);
@@ -78,12 +81,15 @@ public class PlayerMov : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "inimigo")
+        if (collision.gameObject.tag == "enemy")
         {
+            gm.isGameOver = true;
             Destroy(collision.gameObject);
             Destroy(gameObject);
             audioPlayer.PlayOneShot(somMorte);
             gm.pontuacao++;
+           
         }
+
     }
 }

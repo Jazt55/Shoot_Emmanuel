@@ -19,6 +19,10 @@ public class Gamemanager : MonoBehaviour
     public float contador3 = 2;
     float scan3 = 0;
     public GameObject enemy3;
+
+    public bool isGameOver;
+    public GameObject GameOverSc;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +55,7 @@ public class Gamemanager : MonoBehaviour
             ger3();
         }
         pont();
+        GO();
     }
 
     void ger1()
@@ -69,5 +74,12 @@ public class Gamemanager : MonoBehaviour
     {
         pontuacaotxt.text = pontuacao.ToString();
     }
+    void GO()
+    {
+        if (isGameOver == true)
+        {
+            GameOverSc.SetActive(true);
+        }
 
+    }
 }

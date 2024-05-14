@@ -13,7 +13,7 @@ public class sceneManagemant : MonoBehaviour
     void Start()
     {
         sounds[0] = GameObject.Find("MainCamera").GetComponent<AudioSource>();
-        sounds[1] = GameObject.Find("Player").GetComponent<AudioSource>();
+        
         
         
     }
@@ -38,7 +38,8 @@ public class sceneManagemant : MonoBehaviour
     void mutado()
     {
         sounds[0].enabled = !isMute;
-        sounds[1].enabled = !isMute;
+       
+
 
     }
 
